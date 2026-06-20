@@ -1,198 +1,76 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sudhir - System Administrator</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0; padding: 0;
-      background: linear-gradient(135deg, #1f4037, #99f2c8);
-      color: #333;
-      overflow-x: hidden;
-    }
-    header {
-      background: linear-gradient(90deg, #2c3e50, #3498db);
-      color: white;
-      padding: 40px;
-      text-align: center;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-      animation: fadeInDown 1.5s ease;
-    }
-    @keyframes fadeInDown {
-      from {opacity: 0; transform: translateY(-50px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
-    .profile {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 60px;
-      color: white;
-      animation: fadeIn 2s ease;
-    }
-    .profile img {
-      border-radius: 50%;
-      width: 180px;
-      margin-right: 40px;
-      border: 5px solid #fff;
-      box-shadow: 0 0 20px rgba(255,255,255,0.8);
-      transition: transform 0.5s;
-    }
-    .profile img:hover {
-      transform: rotate(5deg) scale(1.05);
-    }
-    section {
-      padding: 50px;
-      animation: fadeInUp 1.5s ease;
-    }
-    @keyframes fadeInUp {
-      from {opacity: 0; transform: translateY(50px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
-    h2 {
-      text-align: center;
-      margin-bottom: 25px;
-      color: #2c3e50;
-    }
-    .skill-flow {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-    .skill {
-      background: #e74c3c;
-      color: white;
-      padding: 15px 25px;
-      border-radius: 25px;
-      font-weight: bold;
-      transition: transform 0.3s, background 0.3s;
-      cursor: pointer;
-      animation: bounce 2s infinite;
-    }
-    .skill:hover {
-      background: #c0392b;
-      transform: scale(1.1);
-    }
-    @keyframes bounce {
-      0%, 100% {transform: translateY(0);}
-      50% {transform: translateY(-5px);}
-    }
-    .card {
-      background: white;
-      border-radius: 12px;
-      padding: 25px;
-      margin: 20px auto;
-      max-width: 800px;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-      cursor: pointer;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .card:hover {
-      transform: scale(1.03);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-    }
-    .hidden {
-      display: none;
-    }
-    footer {
-      background: linear-gradient(90deg, #2c3e50, #3498db);
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Sudhir - System Administrator</h1>
-    <p>Ensuring smooth IT operations & security</p>
-  </header>
+<section>
+  <h2>Skills</h2>
+  <div class="skill-flow">
+    <div class="skill" onclick="toggleSkill('linux')">Linux Administration</div>
+    <div class="skill" onclick="toggleSkill('windows')">Windows Server</div>
+    <div class="skill" onclick="toggleSkill('network')">Networking</div>
+    <div class="skill" onclick="toggleSkill('cloud')">Cloud (AWS/Azure)</div>
+    <div class="skill" onclick="toggleSkill('security')">Security & Firewalls</div>
+    <div class="skill" onclick="toggleSkill('automation')">Automation (Shell/Python)</div>
+  </div>
 
-  <section class="profile">
-    <img src="profile.jpg" alt="Profile Photo">
-    <div>
-      <h2>Hello, I'm Sudhir</h2>
-      <p>Experienced System Administrator with expertise in managing servers, networks, and security protocols.</p>
-    </div>
-  </section>
+  <!-- Hidden Descriptions -->
+  <div id="linux" class="skill-desc hidden">
+    <p>Proficient in managing Linux servers, configuring services, monitoring performance, and ensuring system security.</p>
+  </div>
+  <div id="windows" class="skill-desc hidden">
+    <p>Experienced with Windows Server 2016/2019, Active Directory, DNS, DHCP, Group Policies, and Hyper-V virtualization.</p>
+  </div>
+  <div id="network" class="skill-desc hidden">
+    <p>Strong knowledge of TCP/IP, routing, switching, VPNs, and troubleshooting network connectivity issues.</p>
+  </div>
+  <div id="cloud" class="skill-desc hidden">
+    <p>Hands-on experience with AWS and Azure cloud platforms, including VM deployment, storage, and security management.</p>
+  </div>
+  <div id="security" class="skill-desc hidden">
+    <p>Implemented firewalls, intrusion detection, and VPNs to secure enterprise infrastructure against threats.</p>
+  </div>
+  <div id="automation" class="skill-desc hidden">
+    <p>Automated routine tasks with Shell scripting and Python, improving efficiency and reducing manual errors.</p>
+  </div>
+</section>
 
-  <section>
-    <h2>Skills</h2>
-    <div class="skill-flow">
-      <div class="skill">Linux Administration</div>
-      <div class="skill">Windows Server</div>
-      <div class="skill">Networking</div>
-      <div class="skill">Cloud (AWS/Azure)</div>
-      <div class="skill">Security & Firewalls</div>
-      <div class="skill">Automation (Shell/Python)</div>
-    </div>
-  </section>
+<style>
+  .skill-flow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  .skill {
+    background: #e74c3c;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+  }
+  .skill:hover {
+    background: #c0392b;
+    transform: scale(1.1);
+  }
+  .skill-desc {
+    max-width: 700px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    animation: fadeIn 0.5s ease;
+  }
+  .hidden {
+    display: none;
+  }
+  @keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+  }
+</style>
 
-  <section>
-    <h2>Job Profile</h2>
-    <div class="card" onclick="toggleContent('job')">
-      <p><strong>Click to expand</strong></p>
-      <div id="job" class="hidden">
-        <p>System Administrator responsible for maintaining IT infrastructure, ensuring uptime, managing user accounts, and implementing security protocols across enterprise systems.</p>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Experience</h2>
-    <div class="card" onclick="toggleContent('exp')">
-      <p><strong>Click to expand</strong></p>
-      <div id="exp" class="hidden">
-        <ul>
-          <li>5+ years managing Linux and Windows servers</li>
-          <li>Implemented cloud migration projects (AWS & Azure)</li>
-          <li>Configured firewalls and VPNs for secure access</li>
-          <li>Automated routine tasks using Shell and Python scripts</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Windows Server Experience</h2>
-    <div class="card" onclick="toggleContent('win')">
-      <p><strong>Click to expand</strong></p>
-      <div id="win" class="hidden">
-        <ul>
-          <li>Installed and configured Windows Server 2016/2019</li>
-          <li>Managed Active Directory, DNS, DHCP, and Group Policies</li>
-          <li>Implemented Hyper-V virtualization for enterprise workloads</li>
-          <li>Ensured high availability and disaster recovery solutions</li>
-          <li>Optimized server performance and patch management</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Education</h2>
-    <div class="card" onclick="toggleContent('edu')">
-      <p><strong>Click to expand</strong></p>
-      <div id="edu" class="hidden">
-        <p>Bachelor of Technology in Information Technology</p>
-        <p>Certifications: AWS Certified SysOps Administrator, Microsoft Certified: Azure Administrator Associate</p>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2026 Sudhir | Deployed on GitHub Pages</p>
-  </footer>
-
-  <script>
-    function toggleContent(id) {
-      const content = document.getElementById(id);
-      content.classList.toggle('hidden');
-    }
-  </script>
-</body>
-</html>
+<script>
+  function toggleSkill(id) {
+    const desc = document.getElementById(id);
+    desc.classList.toggle('hidden');
+  }
+</script>
