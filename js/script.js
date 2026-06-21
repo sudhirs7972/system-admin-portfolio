@@ -1,21 +1,26 @@
-AOS.init();
+const acc =
+document.getElementsByClassName("accordion");
 
-new Typed("#typing",{
+for(let i = 0; i < acc.length; i++){
 
-strings:[
+acc[i].addEventListener("click", function(){
 
-"System Administrator",
+this.classList.toggle("active");
 
-"Cloud Engineer",
+let panel =
+this.nextElementSibling;
 
-"AWS | Azure | Linux Specialist"
+if(panel.style.maxHeight){
 
-],
+panel.style.maxHeight = null;
 
-typeSpeed:60,
+}else{
 
-backSpeed:40,
+panel.style.maxHeight =
+panel.scrollHeight + "px";
 
-loop:true
+}
 
 });
+
+}
