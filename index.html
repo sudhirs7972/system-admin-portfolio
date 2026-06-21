@@ -1,130 +1,188 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Sudhir Salunke | System Administrator</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link rel="stylesheet"
+href="https://unpkg.com/aos@next/dist/aos.css">
+
 </head>
 
 <body>
 
 <nav>
-<div class="logo">Sudhir Salunke</div>
 
-<ul>
-<li><a href="#about">About</a></li>
-<li><a href="#experience">Experience</a></li>
-<li><a href="#education">Education</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
+<h2>Sudhir</h2>
+
+<div>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#experience">Experience</a>
+<a href="#contact">Contact</a>
+</div>
+
 </nav>
 
-<header class="hero">
-<img src="assets/profile.jpg" alt="Profile">
+<section class="hero">
 
-<h1>Sudhir Salunke</h1>
+<img src="assets/profile.jpg">
 
-<h2>System Administrator</h2>
+<h1>
+Sudhir Salunke
+</h1>
 
-<p>
-Infrastructure Management | AWS | Azure | GCP |
-Linux | Windows | Security | Automation
-</p>
-
-<a class="btn" href="assets/resume.pdf">Download Resume</a>
-
-</header>
-
-<section id="about">
-<h2>About Me</h2>
+<h2>
+<span id="typing"></span>
+</h2>
 
 <p>
-System Administrator with 1.5 years of experience at
-Winsoft Technology India Pvt. Ltd., Pune.
-Experienced in cloud platforms, infrastructure management,
-automation, networking, backup and disaster recovery.
+System Administrator | Cloud Engineer | Infrastructure Specialist
 </p>
+
+<a class="btn" href="assets/resume.pdf">
+Download Resume
+</a>
+
+</section>
+
+<section id="about" data-aos="fade-up">
+
+<h1>About Me</h1>
+
+<div class="card">
+
+<p>
+
+System Administrator with 1.5 years experience at
+Winsoft Technology India Pvt Ltd, Pune.
+
+Experienced in Windows Server, Linux,
+AWS, Azure, Active Directory,
+Networking, Security and Automation.
+
+</p>
+
+</div>
+
 </section>
 
 <section id="experience">
-<h2>Experience</h2>
 
-<div class="card">
-<h3>System Administrator</h3>
+<h1>Experience</h1>
+
+<div class="timeline card" data-aos="fade-right">
+
+<h2>
+System Administrator
+</h2>
+
+<h3>
+Winsoft Technology India Pvt Ltd
+</h3>
 
 <p>
-Winsoft Technology India Pvt. Ltd., Pune
+
+Managing Windows/Linux servers,
+Cloud infrastructure,
+Active Directory,
+Backup,
+Security and Monitoring.
+
 </p>
 
-<p>
-Managing Windows/Linux infrastructure,
-cloud services, Active Directory,
-security and automation solutions.
-</p>
-</div>
-</section>
-
-<section id="education">
-<h2>Education</h2>
-
-<div class="card">
-<h3>B.Sc</h3>
-<p>Swami Ramanand Teerth Marathwada University</p>
 </div>
 
-<div class="card">
-<h3>Diploma in Cloud Computing</h3>
-<p>Cloud Administration & Infrastructure</p>
-</div>
 </section>
 
 <section id="skills">
-<h2>Skills</h2>
 
-<button class="accordion">AWS</button>
+<h1>Technical Skills</h1>
 
-<div class="panel">
-<p>AWS EC2, S3, IAM, VPC, Route53, CloudWatch and Backup.</p>
+<div class="skills">
+
+<div class="skill card">
+<i class="fa-brands fa-aws"></i>
+<h3>AWS</h3>
+<p>
+EC2, S3, IAM, VPC, CloudWatch
+</p>
 </div>
 
-<button class="accordion">Linux Administration</button>
+<div class="skill card">
 
-<div class="panel">
-<p>Ubuntu, CentOS, RHEL administration and troubleshooting.</p>
+<i class="fa-brands fa-linux"></i>
+
+<h3>Linux</h3>
+
+<p>
+Ubuntu, RHEL, CentOS
+</p>
+
 </div>
 
-<button class="accordion">Windows Server</button>
+<div class="skill card">
 
-<div class="panel">
-<p>Windows Server 2019/2022, DNS, DHCP and AD management.</p>
+<i class="fa fa-server"></i>
+
+<h3>Windows Server</h3>
+
+<p>
+AD, DNS, DHCP, GPO
+</p>
+
 </div>
 
-<button class="accordion">Active Directory</button>
+<div class="skill card">
 
-<div class="panel">
-<p>User management, GPO, OU and domain administration.</p>
+<i class="fa fa-shield"></i>
+
+<h3>Security</h3>
+
+<p>
+Firewall, VPN, SSL
+</p>
+
 </div>
 
-<button class="accordion">Networking & Security</button>
-
-<div class="panel">
-<p>TCP/IP, Firewalls, VPN, VLAN, DNS and Security controls.</p>
 </div>
 
 </section>
 
 <section id="contact">
-<h2>Contact</h2>
 
-<p>Email: sudhirsalunke5@gmail.com</p>
-<p>Phone: +91 7972104481</p>
+<h1>Contact</h1>
+
+<div class="card">
+
+<p>
+<i class="fa fa-envelope"></i>
+sudhirsalunke5@gmail.com
+</p>
+
+<p>
+<i class="fa fa-phone"></i>
+7972104481
+</p>
+
+</div>
 
 </section>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
 <script src="js/script.js"></script>
 
 </body>
+
 </html>
